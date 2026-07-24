@@ -1,0 +1,4 @@
+/home/emanoel/projetos/qt/build/CMakeFiles/lib_engine.dir
+/home/emanoel/projetos/qt/build/CMakeFiles/edit_cache.dir
+/home/emanoel/projetos/qt/build/CMakeFiles/rebuild_cache.dir
+/home/emanoel/projetos/qt/build/CMakeFiles/lib_engine_autogen.dir

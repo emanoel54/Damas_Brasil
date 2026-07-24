@@ -1,0 +1,16 @@
+#!/bin/bash
+# Move a pasta 'data' existente para um local temporario antes da instalacao/upgrade
+# para preservar o aprendizado da IA.
+# O script 'postinst' ira restaurar os dados.
+
+# $1 sera 'install' ou 'upgrade'
+if [ "$1" = "upgrade" ] || [ "$1" = "install" ]; then
+    # Verifica se a pasta de dados antiga existe
+    if [ -d "/opt/lib-engine/data" ]; then
+        echo "Preservando dados de aprendizado da IA..."
+        # Move a pasta para um nome temporario. Ignora erros se nao conseguir.
+        mv /opt/lib-engine/data /opt/lib-engine/data.old 2>/dev/null || true
+    fi
+fi
+
+exit 0

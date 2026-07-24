@@ -1,0 +1,10 @@
+Package: lib-engine
+Version: 1.4
+Section: games
+Priority: optional
+Architecture: amd64
+Depends: libqt6widgets6, libqt6gui6, libqt6core6, libzstd1, alsa-utils
+Maintainer: Emanoel Libonati <brasillinux20@gmail.com>
+Description: LIB Engine - Jogo de Damas com IA
+ Interface gráfica e motor de Inteligência Artificial para o Jogo de Damas na regra brasileira.
+ Possui aprendizado contínuo (Reinforcement Learning) e suporte a Base de Finais (EGTB).

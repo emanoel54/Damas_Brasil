@@ -1,0 +1,19 @@
+#!/bin/bash
+# Restaura os dados de aprendizado da IA e da permissao as pastas.
+
+# $1 sera 'configure'
+if [ "$1" = "configure" ]; then
+    # Verifica se o backup dos dados existe
+    if [ -d "/opt/lib-engine/data.old" ]; then
+        echo "Restaurando dados de aprendizado da IA..."
+        # Copia o conteudo do backup para a nova pasta de dados.
+        cp -a /opt/lib-engine/data.old/* /opt/lib-engine/data/ 2>/dev/null || true
+        # Remove a pasta de backup
+        rm -rf /opt/lib-engine/data.old
+    fi
+fi
+
+# Da permissao total (777) as pastas de dados e EGTB para a IA evoluir sem erro de permissao.
+chmod -R 777 /opt/lib-engine/data 2>/dev/null || true
+chmod -R 777 /opt/lib-engine/db 2>/dev/null || true
+exit 0
